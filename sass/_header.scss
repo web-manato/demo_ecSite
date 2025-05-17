@@ -1,0 +1,35 @@
+@use "_mixin";
+@use "_variable" as g;
+
+// レイアウト
+.ly_header{
+    width: 100%;
+    padding: 18px 0;
+    position: fixed;
+    z-index: 999;
+}
+@include mixin.mq("pc"){
+    .ly_header{
+        padding: 27px 0;
+    }
+}
+
+// ブロックモジュール
+.bl_header{
+    background: g.$bg-white;
+}
+.bl_header_inner{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1300px;
+}
+// カートボタン
+.bl_header_btnWrapper{
+    transition: all 0.3s;
+}
+.bl_header_btnWrapper:hover{
+    opacity: 0.7;
+}

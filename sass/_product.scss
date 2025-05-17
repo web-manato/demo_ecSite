@@ -1,0 +1,52 @@
+@use "_mixin";
+@use "_variable" as g;
+
+// ブロックモジュール
+// cocoシャンプー01
+.bl_product_imgWrapper{
+    img{
+        width: 100%;
+    }
+}
+.bl_product_ttl{
+    font-size: 22px;
+    font-weight: 600;
+    color: g.$font-color-black;
+    line-height: 180%;
+    margin-top: 24px;
+}
+.bl_product_txt{
+    margin-top: 16px;
+}
+@include mixin.mq("pc"){
+    .bl_product{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 80px;
+    }
+    .bl_product_ttl{
+        font-size: 26px;
+        margin-top: 0;
+    }
+}
+
+// 関連商品
+.bl_relateProduct{
+    margin-top: 48px;
+}
+.bl_product_txtGroup{
+    margin-top: 18px;
+}
+@include mixin.mq("tab"){
+    .bl_relateProduct{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 40px;
+    }
+    .bl_product_txtGroup{
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+}

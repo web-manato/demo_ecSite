@@ -1,0 +1,27 @@
+@use "_mixin";
+@use "_variable" as g;
+
+// レイアウト
+.ly_btn__404{
+    text-align: center;
+    margin-top: 32px;
+}
+@include mixin.mq("pc"){
+    .ly_btn__404{
+        margin-top: 40px;
+    }
+}
+
+
+// ブロックモジュール
+.bl_404_txt_group{
+    margin-top: 32px;
+}
+.bl_404_txt{
+    text-align: center;
+}
+@include mixin.mq("pc"){
+    .bl_404_txt_group{
+        margin-top: 40px;
+    }
+}

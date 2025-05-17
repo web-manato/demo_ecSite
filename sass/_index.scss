@@ -1,0 +1,206 @@
+@use "_mixin";
+@use "_variable" as g;
+
+
+// レイアウト
+.ly_kv_top{
+    padding-top: 60px;
+}
+@include mixin.mq("pc"){
+    .ly_kv_top{
+        padding-top: 80px;
+        margin: 0 auto;
+        max-width: 1366px;
+    }
+}
+
+
+// ブロックモジュール
+// キービジュアル
+@include mixin.mq("pc"){
+    .bl_kv_top{
+        width: 95%;
+        max-width: 1233px;
+        margin: 0 0 0 auto;
+        position: relative;
+    }
+}
+// 画像
+.bl_kv_top_img{
+    width: 100%;
+    height: 200px;
+    background-image: url(../img/sp_kv_top_bgImg-2000px.png);
+    background-size: cover;
+    background-position: center;
+}
+@include mixin.mq("tab"){
+    .bl_kv_top_img{
+        height: 450px;
+    }
+}
+@include mixin.mq("pc"){
+    .bl_kv_top_img{
+        width: 73%;
+        height: 690px;
+        background-image: url(../img/pc_kv_top_bgImg-3000px.png);
+        margin: 0 0 0 auto;
+    }
+}
+// コピー部分
+.bl_kv_top_body{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 24px;
+    max-width: 360px;
+}
+.bl_kv_top_body_copy{
+    font-size: 24px;
+    line-height: 230%;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    color: g.$font-color-black;
+}
+@include mixin.mq("tab"){
+    .bl_kv_top_body{
+        margin: 32px auto 0 62px;
+    }
+    .bl_kv_top_body_copy{
+        font-size: 32px;
+    }
+}
+@include mixin.mq("pc"){
+    .bl_kv_top_body{
+        margin: 0;
+        width: 30%;
+        transform: translate(0,-50%);
+        position: absolute;
+        top: 50%;
+        left: 0;
+    }
+    .bl_kv_top_body_copy{
+        font-size: 40px;
+    }
+}
+
+// cocoシャンプーの特徴
+.bl_feature{
+    margin-top: 48px;
+}
+.bl_feature_txtGroup{
+    margin-top: 20px;
+}
+.bl_feature_listItem_ttl_en{
+    margin-top: 20px;
+    color: g.$font-color-primary;
+    font-family: g.$font-family-en;
+    line-height: 180%;
+}
+.bl_feature_listItem_ttl{
+    font-size: 18px;
+    color: g.$font-color-black;
+    line-height: 180%;
+}
+.bl_feature_listItem_txt{
+    margin-top: 8px;
+}
+.bl_feature_listItem + .bl_feature_listItem{
+    margin-top: 48px;
+}
+.bl_feature_listItem_imgWrapper{
+    img{
+        width: 100%;
+    }
+}
+@include mixin.mq("tab"){
+    .bl_feature_list{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 32px;
+    }
+    .bl_feature_listItem + .bl_feature_listItem{
+        margin-top: 0;
+    }
+}
+@include mixin.mq("pc"){
+    .bl_feature{
+        margin-top: 80px;
+    }
+    .bl_feature_list{
+        grid-template-columns: repeat(3,1fr);
+        gap: 80px 60px;
+    }
+    .bl_feature_listItem:nth-child(1){
+        grid-column: 1/4;
+
+        figure{
+            display: flex;
+            gap: 80px;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .bl_feature_listItem_ttl{
+        font-size: 20px;
+    }
+}
+
+
+// セクション切り替わり
+.bl_secChange{
+    width: 100%;
+    height: 180px;
+    background-size: cover;
+    background-position: center center;
+}
+.bl_secChange__first{
+    background-image: url(../img/sp_secChamge-2000px.png);
+}
+.bl_secChange__second{
+    background-image: url(../img/sp_secChange2-2000px.png);
+}
+@include mixin.mq("tab"){
+    .bl_secChange{
+        height: 400px;
+    }
+}
+@include mixin.mq("pc"){
+    .bl_secChange{
+        height: 640px;
+    }
+    .bl_secChange__first{
+        background-image: url(../img/pc_secChange-3000px.png);
+    }
+    .bl_secChange__second{
+        background-image: url(../img/pc_secChange2-3000px.png);
+    }
+}
+
+
+// ラインナップ
+.bl_lineUp_group{
+    margin-top: 48px;
+}
+@include mixin.mq("tab"){
+    .bl_lineUp_group{
+        margin-top: 80px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 1fr auto;
+        gap: 80px;
+    }
+}
+
+
+// インスタグラム
+.bl_instagram{
+    margin-top: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+}
+.bl_instagram_imgWrapper{
+    img{
+        width: 100%;
+    }
+}

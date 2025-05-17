@@ -1,0 +1,256 @@
+@use "_mixin";
+@use "_variable" as g;
+
+// ベーススタイル
+body{
+    font-size: 14px;
+    font-family: g.$font-family-jp;
+    color: g.$font-color-base;
+    letter-spacing: 0.1em;
+    line-height: 180%;
+}
+span{
+    display: block;
+}
+// PC
+@include mixin.mq("pc"){
+    body{
+        font-size: 16px;
+    }
+}
+
+// ブロックモジュール
+// コンテンツ幅
+.bl_cont_inner{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+// PC
+@include mixin.mq("pc"){
+    .bl_cont_inner{
+        width: 80%;
+    }
+    .bl_cont_inner__70{
+        width: 70%;
+    }
+}
+// 画像
+.bl_imgWrapper img{
+    width: 100%;
+}
+
+// ユニークモジュール
+.un_lb__reverse{
+    display: none;
+}
+@include mixin.mq("pc"){
+    .un_lb{
+        display: none;
+    }
+    .un_lb__reverse{
+        display: block;
+    }
+}
+
+
+// レイアウト
+.ly_cont{
+    padding: 95px 0;
+}
+@include mixin.mq("pc"){
+    .ly_cont{
+        padding: 150px 0;
+    }
+}
+.ly_kv_page{
+    width: 100%;
+    height: 230px;
+}
+@include mixin.mq("tab"){
+    .ly_kv_page{
+        height: 280px;
+    }
+}
+@include mixin.mq("pc"){
+    .ly_kv_page{
+        height: 380px;
+    }
+}
+// セクションタイトル
+.ly_secTtl{
+    text-align: center;
+}
+// ボタン
+.ly_btn{
+    margin-top: 16px;
+    text-align: center;
+}
+.ly_btn__kv{
+    margin-top: 24px;
+    width: 80%;
+}
+.ly_btn__instagram{
+    text-align: center;
+    margin-top: 48px;
+}
+.ly_btn__topProduct{
+    text-align: center;
+}
+.ly_btn__relateProduct{
+    text-align: center;
+    margin-top: 24px;
+}
+@include mixin.mq("tab"){
+    .ly_btn__relateProduct{
+        margin-top: auto;
+    }
+    .ly_btn__product{
+        margin-top: auto;
+        margin-bottom: 0;
+    }
+}
+@include mixin.mq("pc"){
+    .ly_btn__kv{
+        margin-top: 96px;
+        width: 100%;
+    }
+    .ly_btn__topProduct{
+        margin-top: 24px;
+        text-align: left;
+    }
+}
+
+
+// ブロックモジュール
+// 背景色
+.bl_cont_bgPrimary{
+    background: g.$bg-primary-light;
+}
+// セクションタイトル
+.bl_secTtl_en{
+    font-size: 20px;
+    font-weight: 600;
+    font-family: g.$font-family-en;
+    color: g.$font-color-black;
+    line-height: 100%;
+    letter-spacing: 0.4em;
+    text-indent: 0.4em;
+}
+.bl_secTtl_jp{
+    margin-top: 16px;
+    color: g.$font-color-black;
+    line-height: 100%;
+}
+.bl_secTtl_en__p2{
+    line-height: 160%;
+}
+@include mixin.mq("tab"){
+    .bl_secTtl_en{
+        font-size: 24px;
+    }
+}
+@include mixin.mq("pc"){
+    .bl_secTtl_en{
+        font-size: 32px;
+    }
+    .bl_secTtl_jp{
+        font-size: 18px;
+    }
+}
+// プロダクト
+.bl_lineUp_item{
+    height: 100%;
+
+    figure{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+}
+.bl_lineUp_item_imgWrapper{
+    img{
+        width: 100%;
+    }
+}
+.bl_lineUp_item_txtGroup{
+    width: 90%;
+    margin: 18px auto 0;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.bl_lineUp_item_ttl{
+    font-size: 18px;
+    color: g.$font-color-black;
+    text-align: center;
+}
+.bl_lineUp_item_txt{
+    margin-top: 8px;
+    text-align: center;
+}
+.bl_lineUp_item + .bl_lineUp_item{
+    margin-top: 48px;
+}
+@include mixin.mq("tab"){
+    .bl_lineUp_item + .bl_lineUp_item{
+        margin-top: 0;
+    }
+}
+
+// エレメントモジュール
+// ボタン
+.el_btn{
+    display: inline-block;
+    width: 100%;
+    padding: 18.5px;
+    border: 1px solid g.$border-primary;
+    color: g.$font-color-white;
+    text-align: center;
+    background: g.$bg-primary;
+    font-family: g.$font-family-en;
+    line-height: 100%;
+    transition: all 0.3s;
+}
+.el_btn__instagram{
+    width: 260px;
+}
+.el_btn__404{
+    width: 260px;
+}
+.el_btn__jp{
+    font-family: g.$font-family-jp;
+    width: 80%;
+}
+.el_btn:hover{
+    background: g.$bg-white;
+    color: g.$font-color-black;
+}
+@include mixin.mq("pc"){
+    .el_btn__instagram{
+        width: 324px;
+    }
+    .el_btn__404{
+        width: 324px;
+    }
+}
+
+// キービジュアル画像
+.el_kv_page_first{
+    background-image: url(../img/sp_secChange2-2000px.png);
+    background-size: cover;
+    background-position: center center;
+}
+.el_kv_page_second{
+    background-image: url(../img/sp_404_kv-2000px.png);
+    background-size: cover;
+    background-position: center center;
+}
+@include mixin.mq("pc"){
+    .el_kv_page_first{
+        background-image: url(../img/pc_secChange2-3000px.png);
+    }
+    .el_kv_page_second{
+        background-image: url(../img/pc_404_kv-3000px.png);
+    }
+}
