@@ -7,6 +7,8 @@
 -   **feat-** meta情報の修正
 -   **feat-** OGP設定
 -   **feat-** WebP出し分けのためのhtml修正
+-   **feat-** css微調整
+-   **feat-** .htaccessの修正
 
 
 ---
