@@ -464,8 +464,15 @@ span {
   margin-top: 48px;
 }
 
+.bl_feature_listItem_imgWrapper {
+  height: auto;
+  display: flex;
+}
 .bl_feature_listItem_imgWrapper img {
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media screen and (min-width: 768px) {
