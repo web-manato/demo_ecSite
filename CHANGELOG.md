@@ -9,6 +9,7 @@
 -   **feat-** WebP出し分けのためのhtml修正
 -   **feat-** css微調整
 -   **feat-** .htaccessの修正
+-   **refactor-** コード成型
 
 
 ---
