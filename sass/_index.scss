@@ -192,6 +192,12 @@
         gap: 80px;
     }
 }
+.bl_lineUp_item_imgWrapper{
+    img{
+        width: 100%;
+        height: auto;
+    }
+}
 
 
 // インスタグラム
@@ -205,5 +211,6 @@
 .bl_instagram_imgWrapper{
     img{
         width: 100%;
+        height: auto;
     }
 }

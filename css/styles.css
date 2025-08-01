@@ -464,10 +464,6 @@ span {
   margin-top: 48px;
 }
 
-.bl_feature_listItem_imgWrapper {
-  height: auto;
-  display: flex;
-}
 .bl_feature_listItem_imgWrapper img {
   width: 100%;
   height: 100%;
@@ -550,6 +546,11 @@ span {
     gap: 80px;
   }
 }
+.bl_lineUp_item_imgWrapper img {
+  width: 100%;
+  height: auto;
+}
+
 .bl_instagram {
   margin-top: 48px;
   display: flex;
@@ -560,10 +561,12 @@ span {
 
 .bl_instagram_imgWrapper img {
   width: 100%;
+  height: auto;
 }
 
 .bl_product_imgWrapper img {
   width: 100%;
+  height: auto;
 }
 
 .bl_product_ttl {
