@@ -248,9 +248,9 @@ span{
 }
 @include mixin.mq("pc"){
     .el_kv_page_first{
-        background-image: url(../img/pc_secChange2-3000px.png);
+        background-image: url(../img/pc_secChange2-2500px.png);
     }
     .el_kv_page_second{
-        background-image: url(../img/pc_404_kv-3000px.png);
+        background-image: url(../img/pc_404_kv-2500px.png);
     }
 }
